@@ -13,17 +13,21 @@ public class MainActivity extends AppCompatActivity {
 
     public void dropIn(View view) {
         ImageView counter = (ImageView) view;
+
         System.out.println(counter.getTag().toString());
-        counter.setTranslationY(-1000f);
-        if(activePlayer == 0) {
-            counter.setImageResource(R.drawable.yellow);
-            counter.animate().translationYBy(100f).rotation(360).setDuration(300);
-            activePlayer = 1;
-        }
-        else{
-            counter.setImageResource(R.drawable.red);
-            counter.animate().translationYBy(100f).rotation(360).setDuration(300);
-            activePlayer = 0;
+        int tappedCounter = Integer.parseInt(counter.getTag().toString());
+        if (gameState[tappedCounter] == 2) {
+            gameState[tappedCounter] = activePlayer;
+            counter.setTranslationY(-1000f);
+            if (activePlayer == 0) {
+                counter.setImageResource(R.drawable.yellow);
+                counter.animate().translationYBy(100f).rotation(360).setDuration(300);
+                activePlayer = 1;
+            } else {
+                counter.setImageResource(R.drawable.red);
+                counter.animate().translationYBy(100f).rotation(360).setDuration(300);
+                activePlayer = 0;
+            }
         }
     }
 
