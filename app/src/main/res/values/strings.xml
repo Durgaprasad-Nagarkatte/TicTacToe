@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Game Connect</string>
+    <string name="buttonText"> Play Again !!</string>
+    <string name="text">DP Company</string>
+
+
 </resources>

@@ -144,10 +144,22 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="New Button"
+            android:text="@string/buttonText"
             android:id="@+id/playAgain"
             android:layout_gravity="center_horizontal"
             android:onClick="playAgain" />
     </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text"
+        android:id="@+id/textView"
+        android:layout_below="@+id/gridLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:textColor="#0c0b0b"
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
 </RelativeLayout>

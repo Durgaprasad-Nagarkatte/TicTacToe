@@ -25,12 +25,12 @@ MainActivity extends AppCompatActivity {
             counter.setTranslationY(-1000f);
             if (activePlayer == 0) {
                 counter.setImageResource(R.drawable.yellow);
-                counter.animate().translationYBy(100f).rotation(360).setDuration(300);
+                counter.animate().translationYBy(1000f).rotation(360).setDuration(300);
                 activePlayer = 1;
             }
             else {
                 counter.setImageResource(R.drawable.red);
-                counter.animate().translationYBy(100f).rotation(360).setDuration(300);
+                counter.animate().translationYBy(1000f).rotation(360).setDuration(300);
                 activePlayer = 0;
             }
             for(int[] winningPosition: winningPositions){
